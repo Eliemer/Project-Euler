@@ -21,8 +21,6 @@ let primeFactors (n : bigint) : bigint list =
     getFactor [] n (bigint 2) 
 
 let reverseString (str : string) : string =
-    let mutable res : Rune list = []
-
     str.EnumerateRunes()
     |> Seq.rev
     |> Seq.toArray

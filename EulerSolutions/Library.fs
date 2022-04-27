@@ -35,3 +35,11 @@ module Euler =
         |> Seq.filter (fun nStr -> nStr = reverseString nStr)
         |> Seq.map int
         |> Seq.max
+
+    // ID: 5
+    let ``Smallest positive number that is evenly divisible by all numbers from 1 to n`` n =
+        let range = [1..n]
+        let possible = Seq.initInfinite (fun n -> n + 1)
+
+        possible
+        |> Seq.find (fun x -> List.forall (fun m -> x % m = 0) range)

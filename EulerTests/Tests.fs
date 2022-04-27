@@ -21,3 +21,7 @@ let ``The largest prime factor of 13195 is 29`` () =
 [<Fact>]
 let ``The largest palindrome made from the product of two 2-digit numbers is 9009`` () =
     Assert.Equal(9009, ``Largest palindrome from product of n-digit numbers`` 2)
+
+[<Fact>]
+let ``2520 is the smallest number that can be divided evenly by all numbers 1 to 10`` () =
+    Assert.Equal(2520, ``Smallest positive number that is evenly divisible by all numbers from 1 to n`` 10)
