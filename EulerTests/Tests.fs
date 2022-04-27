@@ -17,3 +17,7 @@ let ``The sum of all even-valued terms of the first ten terms of the Fibonacci s
 [<Fact>]
 let ``The largest prime factor of 13195 is 29`` () =
     Assert.Equal((bigint 29), ``Largest prime factor`` (bigint 13195))
+
+[<Fact>]
+let ``The largest palindrome made from the product of two 2-digit numbers is 9009`` () =
+    Assert.Equal(9009, ``Largest palindrome from product of n-digit numbers`` 2)
