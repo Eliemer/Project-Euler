@@ -25,3 +25,7 @@ let ``The largest palindrome made from the product of two 2-digit numbers is 900
 [<Fact>]
 let ``2520 is the smallest number that can be divided evenly by all numbers 1 to 10`` () =
     Assert.Equal(2520, ``Smallest positive number that is evenly divisible by all numbers from 1 to n`` 10)
+
+[<Fact>]
+let ``The Sum Square difference for the first ten natural numbers is 2640`` () =
+    Assert.Equal(2640, ``Sum Square difference for ints up to n`` 10)

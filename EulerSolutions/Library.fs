@@ -43,3 +43,12 @@ module Euler =
 
         possible
         |> Seq.find (fun x -> List.forall (fun m -> x % m = 0) range)
+
+    // ID: 6
+    let ``Sum Square difference for ints up to n`` n =
+        let range = [1..n]
+
+        let _, sumOfSquares = List.mapFold (fun acc n -> n*n, acc + (n*n)) 0 range
+        let squareOfSum = List.reduce (+) range |> (fun n -> n*n)
+
+        squareOfSum - sumOfSquares
