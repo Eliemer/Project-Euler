@@ -28,6 +28,12 @@ let reverseString (str : string) : string =
     |> System.String
 
 
+let isPrime n = 
+    let mutable isPrimeTest = true
+    let upper = sqrt(float n) |> floor |> int
 
-
-    
+    for i in [2..upper] do
+        if n % i = 0 then
+            isPrimeTest <- false
+            
+    isPrimeTest

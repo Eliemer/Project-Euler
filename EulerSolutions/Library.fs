@@ -52,3 +52,19 @@ module Euler =
         let squareOfSum = List.reduce (+) range |> (fun n -> n*n)
 
         squareOfSum - sumOfSquares
+
+    // ID: 7
+    let nthPrime n = 
+        if n = 1 then
+            2
+        else 
+            let mutable count = 2
+            let mutable m = 3
+
+            while count < n do
+                m <- m + 2
+
+                if isPrime(m) then
+                    count <- count + 1
+
+            m

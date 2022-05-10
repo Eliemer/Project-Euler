@@ -29,3 +29,12 @@ let ``2520 is the smallest number that can be divided evenly by all numbers 1 to
 [<Fact>]
 let ``The Sum Square difference for the first ten natural numbers is 2640`` () =
     Assert.Equal(2640, ``Sum Square difference for ints up to n`` 10)
+
+[<Fact>]
+let ``The first six prime numbers are 2, 3, 5, 7, 11, and 13`` () =
+
+    let expected = [2;3;5;7;11;13]
+    let actual = [1..6] |> List.map nthPrime
+
+    Assert.StrictEqual(expected, actual)
+    Assert.Equal(104_743, nthPrime 10_001)
