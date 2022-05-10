@@ -38,3 +38,10 @@ let ``The first six prime numbers are 2, 3, 5, 7, 11, and 13`` () =
 
     Assert.StrictEqual(expected, actual)
     Assert.Equal(104_743, nthPrime 10_001)
+
+[<Fact>]
+let ``The largest product of 4 adjacent digits in the series is 5832`` () =
+
+    Assert.Equal(5832L, largestProductInSeries 4 Helpers.``1000-digit number``)
+    Assert.Equal(23514624000L, largestProductInSeries 13 Helpers.``1000-digit number``)
+    

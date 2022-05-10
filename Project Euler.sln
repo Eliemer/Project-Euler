@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerSolutions", "EulerSolutions\EulerSolutions.fsproj", "{10365110-FC59-4785-81E1-0D1236707C63}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "EulerSolutions", "EulerSolutions\EulerSolutions.fsproj", "{10365110-FC59-4785-81E1-0D1236707C63}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerTests", "EulerTests\EulerTests.fsproj", "{60962393-EDAC-43F6-9501-14EB9BBD9F9F}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "EulerTests", "EulerTests\EulerTests.fsproj", "{60962393-EDAC-43F6-9501-14EB9BBD9F9F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{10365110-FC59-4785-81E1-0D1236707C63} = {10365110-FC59-4785-81E1-0D1236707C63}
 	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerRunner", "EulerRunner\EulerRunner.fsproj", "{CED58710-5E1D-4DBC-BDA2-EC0F7EFA9533}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{60962393-EDAC-43F6-9501-14EB9BBD9F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60962393-EDAC-43F6-9501-14EB9BBD9F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60962393-EDAC-43F6-9501-14EB9BBD9F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED58710-5E1D-4DBC-BDA2-EC0F7EFA9533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED58710-5E1D-4DBC-BDA2-EC0F7EFA9533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED58710-5E1D-4DBC-BDA2-EC0F7EFA9533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED58710-5E1D-4DBC-BDA2-EC0F7EFA9533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿namespace EulerSolutions
 
+open System
 open Helpers
 
 module Euler =
@@ -68,3 +69,9 @@ module Euler =
                     count <- count + 1
 
             m
+
+    // ID: 8
+    let largestProductInSeries n (str : string) =
+        Seq.windowed n str
+        |> Seq.map (Array.fold (fun acc x -> (string >> Int64.Parse) x |> (*) acc) 1L)
+        |> Seq.max
