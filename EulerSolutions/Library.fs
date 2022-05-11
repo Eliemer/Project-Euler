@@ -72,6 +72,19 @@ module Euler =
 
     // ID: 8
     let largestProductInSeries n (str : string) =
-        Seq.windowed n str
-        |> Seq.map (Array.fold (fun acc x -> (string >> Int64.Parse) x |> (*) acc) 1L)
+        str
+        |> Seq.map (string >> Int64.Parse)
+        |> Seq.windowed n
+        |> Seq.map (Array.fold (*) 1L)
         |> Seq.max
+
+    // ID: 9
+    let ``Find pythagorean triplet whose sum is n`` n =
+        seq {
+            for i in [1..n] do
+                for j in [i+1..n] do
+                    for k in [j+1..n] do
+                        if isPythagoreanTriple (i,j,k) && i + j + k = n then 
+                            (i,j,k) }
+
+                        

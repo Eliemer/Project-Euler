@@ -45,3 +45,7 @@ let ``The largest product of 4 adjacent digits in the series is 5832`` () =
     Assert.Equal(5832L, largestProductInSeries 4 Helpers.``1000-digit number``)
     Assert.Equal(23514624000L, largestProductInSeries 13 Helpers.``1000-digit number``)
     
+[<Fact>]
+let ``There exists only one pythagorean triplet whose sum is 1_000`` () =
+
+    Assert.Single(``Find pythagorean triplet whose sum is n`` 1000)
