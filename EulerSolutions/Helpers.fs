@@ -66,3 +66,19 @@ let isPythagoreanTriple (a, b, c) =
         false
     else
         (a * a) + (b * b) = (c * c)
+
+let sieveOfEratosthenes n =
+    let res = Array.create (n) true
+    res.[0] <- false // 1 is not a prime
+
+    let upper = n |> float |> sqrt |> int
+
+    for i in [1..upper] do
+        let upperJ = [i*i .. i .. n]
+        if res.[i-1] then
+            for j in upperJ do
+                res.[j-1] <- false
+
+    Array.indexed res
+    |> Array.choose (fun (idx, isPrime) -> if isPrime then Some (idx + 1) else None)
+    

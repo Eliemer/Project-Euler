@@ -49,3 +49,10 @@ let ``The largest product of 4 adjacent digits in the series is 5832`` () =
 let ``There exists only one pythagorean triplet whose sum is 1_000`` () =
 
     Assert.Single(``Find pythagorean triplet whose sum is n`` 1000)
+
+[<Fact>]
+let ``Sieve Of Eratosthenes`` () =
+    Assert.Equal(2, Assert.Single(Helpers.sieveOfEratosthenes 2))
+
+    Assert.Equal<int[]>([|2;3;5;7|], Helpers.sieveOfEratosthenes 10)
+    

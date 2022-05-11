@@ -87,4 +87,7 @@ module Euler =
                         if isPythagoreanTriple (i,j,k) && i + j + k = n then 
                             (i,j,k) }
 
-                        
+    // ID: 10
+    let ``Sum of all prime numbers under 2_000_000`` () =
+        sieveOfEratosthenes 2_000_000
+        |> Array.sumBy bigint
